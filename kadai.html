@@ -4,45 +4,71 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
             <title>Amazon | 本, ファッション, 家電から食品まで | アマゾン</title>
-            <link rel="stylesheet" type="text/css" href="../kadai.css">
+            <link rel="stylesheet" type="text/css" href="/kadai.css">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript" src="/kadai.js"></script>
     </head>
     <body>
         <header>
-            <div id="nav-drawer">
+            <nav id="nav-drawer">
                 <input id="nav-input" type="checkbox" class="nav-unshown">
                 <label id="nav-open" for="nav-input"><span></span></label>
                 <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-                <div id="nav-content">ここに中身を入れる</div>   
-            </div>
-            <div class ="logo"><img src="../amazonLogo.PNG" height=40px></div>
+                <div id="nav-content1">
+                    <img class="icon" src="../icon.PNG">
+                    <a class="hello"> こんばんは,xxxxx</a>
+                    <a class="bye">×</a>
+                </div>
+                <div id="nav-content">
+                    <ul>
+                        <li><a href="#">トップ</a></li>
+                        <li><a href="#">注文履歴</a></li>
+                        <li><a href="#">再び購入</a></li>
+                        <li><a href="#">ほしい物リスト</a></li>
+                        <li><a href="#">アカウントサービス</a></li>
+                        <li class="under"><a href="#">カテゴリー</a><a class="linkSide">〉</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"  class="program">プログラムと特典</a></li>
+                        <li><a href="#">タイムセール</a></li>
+                        <li><a href="#">Amazonギフト券</a></li>
+                        <li><a href="#">Amazonランキング</a></li>
+                        <li><a href="#">履歴からもう一度買う</a></li>
+                        <li class="under"><a href="#">すべてを見る</a><a class="linkSide">〉</a></li>
+                    </ul>
+                </div>   
+            </nav>
+            <div class ="logo"><img src="../amazonLogo.PNG"></div>
             <img class ="mark" src="../bell.PNG">
             <img class ="mark" src="../Basket.PNG">
         </header>
 
         <div class ="ser">
             <input type="text" class="font-awesome" placeholder=" &#xF002;   なにをお探しですか？">
-            <img class ="muri" src="../cameramike.PNG">
+            <img class ="cameramike" src="../cameramike.PNG">
         </div>
         
         <div class ="mydate">
             <img class="site" src="../site.PNG">
-            <a class="ju">すぬけさん - xxx-xxxx にお届け</a>
+            <a class="address">xxxxxさん - xxx-xxxx にお届け</a>
         </div>
         <img class ="smartspeaker" src="../smartspeaker.PNG">
         <div class ="primepets" >
-            <img class="setp" src="../primepets.PNG">
+            <img class="setprime" src="../primepets.PNG">
         </div>
-        <h3 class="timese">注目のタイムセール</h3>
-        <img class ="seal" src="../seal.PNG">
+        <h3 class="timesale">注目のタイムセール</h3>
+        <div class ="sale"><img src="../sale.PNG"></div>
         <br>
         <br>
-        <a class="mohua">【秋冬寝具】モフアやナイスデイの毛布や掛け布…</a>
+        <a class="productName">【秋冬寝具】モフアやナイスデイの毛布や掛け布…</a>
+        <br>
         <a class="price">¥930 - ¥18,612</a>
         <br>
         <br>
-        <a class="last">タイムセールをもっと見る　　　　　　 　　　〉</a>
+        <div class="last">
+            <a>タイムセールをもっと見る</a><a>　　　　　　　　　　〉</a>
+        </div>
         <br>
         <a class="product">チェックした商品の関連商品</a>
     </body>   

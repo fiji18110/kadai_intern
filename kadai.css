@@ -1,7 +1,7 @@
 
   body{
     margin: 0;
-    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック','Yu Gothic','メイリオ','ＭＳ Ｐゴシック','MS PGothic';
+    font-family:'メイリオ', 'ＭＳ ゴシック',sans-serif;
   }
   
   #nav-drawer {
@@ -33,12 +33,11 @@
     bottom: -16px;
   }
   
-  /*閉じる用の薄黒カバー*/
   #nav-close {
-    display: none;/*はじめは隠しておく*/
+    display: none;
     position: fixed;
     z-index: 99;
-    top: 0;/*全体に広がるように*/
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -49,34 +48,100 @@
   
   /*中身*/
   #nav-content {
-    overflow: auto;
+    overflow:scroll;
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
+    top: 8%;
+    left: 5%;
+    z-index: 1000;
     width: 80%;
     max-width: 330px;
-    height: 100%;
+    height: 95%;
     background: #fff;
     transition: .3s ease-in-out;
-    -webkit-transform: translateY(-105%);
-    transform: translateY(-105%);
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-120%);
+    
   }
-  
+  .fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
   #nav-input:checked ~ #nav-close {
     display: block;
-    transform: translateX(0%);
-    opacity: .5;
+    opacity: .6;
   }
   
   #nav-input:checked ~ #nav-content {
-    -webkit-transform: translateY(0%);
-    transform: translateY(10%);
-    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-content.active{
+    transform:translateY(-120%);
+  }
+  #nav-content1 {
+    position: fixed;
+    top: 0;
+    left: 5%;
+    z-index: 1000;
+    width: 80%;
+    max-width: 330px;
+    height: 95%;
+    background: rgba(255, 255, 255, 0);
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-120%);
+    color: #fff;
+  }
+
+  #nav-input:checked ~ #nav-content1 {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+  .hello{
+    position: absolute;
+    top:3%;
+    padding-left: 3%;
+  }
+  .bye{
+    position: absolute;
+    top:2%;
+    padding-left: 95%;
+    font-size: 150%;
+  }
+  ul {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    list-style-type: none;
+    padding-left: 0%;
+  }
+  ul li{
+    padding-bottom: 10%;
+  }
+  ul li a {
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+  }
+  .linkSide{
+    padding-left: 40%;
+  }
+  .under{
+    padding-bottom: 5%;
+    border-bottom: 1px solid #ccc;
+  }
+  .program{
+    font-size: 13px;
+    color: rgb(165, 165, 165);
   }
   .logo{
    margin: auto;
    padding-left: 40px;
+   height:40px;
    
   }
   header{
@@ -91,97 +156,102 @@
     padding-right:8px;
   }
   
-input.font-awesome {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  height: 25px;
-  width: 97%;
-  margin: 1%;
-}
-.font-awesome{
-  border-radius: 3px ;
-  border: 1px solid #ccc
-}
-.muri{
-  height: 27px;
-  width: 70px;
-  position: absolute;
-  margin: 1.2%;
-  margin-left: 80%;
-}
-.ser{
-  background-color: #232F3E;
-  display: flex
-}
-.mydate{
-  background: #34445c;
-  color: #fff;
-  padding-top:3px ;
-}
-.site{
-  height: 28px;
-  width: 30px;
-  padding-left:5px; 
-  
-}
-.ju{
-  font-size: 11px;
-  position: relative;
-  bottom: 10px;
-  left: 10px;
-}
-.smartspeaker{
-  width: 100%;
-  background: #ccc;
-}
-.primepets{
-  background: #ccc;
-  width: 100%;
-  padding-top: 6px;
-  margin-top: -4px;
-  padding-bottom: 2px;
-}
-.setp{
-  padding-left: 1px;
-}
-.timese{
-  font-weight:500;
-  margin-top: 10px;
-  margin-left: 12px;
-  margin-bottom: 10px;
-}
-.seal{
-  margin-left: 22%;
-}
-.mohua{
-  font-size: 15px;
-  padding-left: 10px;
-}
-.price{
-  font-size: 15px;
-  margin-left: 13px;
-  padding-bottom: 10px;
-  padding-right: 65%;
-  border-bottom: solid 1px #ccc;
-}
-.last{
-  font-weight:500;
-  padding-left: 13px;
-  padding-right: 20.9px;
-  font-size: 15.3px;
-  color: #0198df;
-  padding-bottom: 12px;
-  border-bottom: solid 6px #ccc;
-}
-.product{
-  position: absolute;
-  font-weight:500;
-  font-size: 18px;
-  margin-top: 23px;
-  margin-left: 12px;
-  margin-bottom: 10px;
-  padding-right: 30%;
-  border-bottom: solid 1px #ccc;
-}
+  input.font-awesome {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    height: 25px;
+    width: 97%;
+    margin: 1%;
+  }
+  .font-awesome{
+    position: absolute;
+    border-radius: 3px ;
+    border: 1px solid #ccc;
+  }
+  .cameramike{
+    height: 27px;
+    width: 70px;
+    margin: 1.2%;
+    padding-left: 77%;
+    z-index: 5;
+  }
+  .ser{
+    display: flex;
+    background-color: #232F3E;
+  }
+  .mydate{
+    background: #34445c;
+    color: #fff;
+    padding-top:3px ;
+  }
+  .site{
+    height: 28px;
+    width: 30px;
+    padding-left:5px; 
+    
+  }
+  .address{
+    position: relative;
+    font-size: 12px;
+    bottom: 10px;
+    left: 4px;
+    font-weight:100;
+  }
+  .smartspeaker{
+    width: 100%;
+    background: #ccc;
+  }
+  .primepets{
+    background: rgb(223, 223, 223);
+    padding-top: 7px;
+    margin-top: -7px;
+  }
+  .setprime{
+    width: 100%;
+    padding-left: 1px;
+  }
+  .timesale{
+    font-weight:500;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+  }
+  .sale{
+    text-align: center;
+  }
+  .productName{
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .price{
+    font-size: 15px;
+    margin-left: 13px;
+    padding-bottom: 10px;
+    padding-right: 63%;
+    border-bottom: solid 1px #ccc;
+  }
+  .last{
+    font-weight:500;
+    padding-left: 13px;
+    padding-right: 0%;
+    font-size: 15px;
+    color: #0198df;
+    padding-bottom: 14px;
+    border-bottom: solid 5px rgb(223, 223, 223);
+  }
+  .product{
+    position: absolute;
+    font-weight:500;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    padding-right: 31%;
+    border-bottom: solid 1px #ccc;
+  }
+  .icon{
+    padding-top: 4%;
+    height: 5%;
+    width: 10%;
+  }
